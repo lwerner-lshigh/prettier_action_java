@@ -1,7 +1,7 @@
-name: Prettier Action
+name: Prettier Java Action
 description: Automatically runs prettier on all your changes.
 
-author: Conrad Großer <grosserconrad@gmail.com>
+author: Lukas Werner <lwerner@lshigh.org>
 
 inputs:
   commit_message:
