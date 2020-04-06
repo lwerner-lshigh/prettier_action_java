@@ -10,7 +10,7 @@ A GitHub action for styling files with [prettier-java](https://github.com/jhipst
 | - | :-: | :-: | - |
 | dry | :x: | False | Runs the action in dry mode. Files wont get changed and the action fails if there are unprettified files. |
 | prettier_version | :x: | False | Specific prettier version (by default use latest) |
-| prettier_options | :x: | `--write **/*.js` | Prettier options (by default it applies to the whole repository) |
+| prettier_options | :x: | `--write **/*.java` | Prettier options (by default it applies to the whole repository) |
 | commit_options | :x: | - | Custom git commit options |
 | commit_message | :x: | Prettified Code! | Custom git commit message |
 | file_pattern | :x: | * | Custom git add file pattern |
@@ -36,10 +36,10 @@ jobs:
       uses: actions/checkout@v1
       with:
         fetch-depth: 1
-    - name: Prettify the JS Code
-      uses: creyD/prettier_action@v2.1
+    - name: Prettify the Java Code
+      uses: lwerner-lshigh/prettier_action_java@v1.1.1
       with:
-        prettier_options: '--no-semi --write *.js'
+        prettier_options: '--no-semi --write *.java'
         branch: ${{ github.head_ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -64,9 +64,9 @@ jobs:
       with:
         fetch-depth: 1
     - name: Prettify the JS Code
-      uses: creyD/prettier_action@v2.1
+      uses: lwerner-lshigh/prettier_action_java@v1.1.1
       with:
-        prettier_options: '--no-semi --write *.js'
+        prettier_options: '--no-semi --write *.java'
         branch: master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -76,4 +76,4 @@ More documentation for writing a workflow can be found [here](https://help.githu
 
 ## Issues
 
-Please report all bugs and feature request using the [GitHub issues function](https://github.com/creyD/prettier_action/issues/new). Thanks!
+Please report all bugs and feature request using the [GitHub issues function](https://github.com/lwerner-lshigh/prettier_action_java/issues/new). Thanks!
