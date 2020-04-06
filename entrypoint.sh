@@ -40,7 +40,7 @@ echo "Installing prettier..."
 if "$INPUT_PRETTIER_VERSION"; then
   npm install --silent --global prettier@$INPUT_PRETTIER_VERSION
 else
-  npm install --silent --global prettier
+  npm install --silent --global prettier prettier-plugin-java
 fi
 
 echo "Prettifing files..."
