@@ -23,7 +23,7 @@ A GitHub action for styling files with [prettier-java](https://github.com/jhipst
 This is a small example of what your `action.yml` could look like (on pull request mode):
 
 ```yaml
-name: Prettier for JS Code
+name: Prettier for Java Code
 
 on: [pull_request]
 
@@ -48,7 +48,7 @@ jobs:
 #### Example - On Push
 
 ```yaml
-name: Prettier for JS Code
+name: Prettier for Java Code
 
 on:
   push:
@@ -63,7 +63,7 @@ jobs:
       uses: actions/checkout@v1
       with:
         fetch-depth: 1
-    - name: Prettify the JS Code
+    - name: Prettify the Java Code
       uses: lwerner-lshigh/prettier_action_java@v1.1.1
       with:
         prettier_options: '--no-semi --write *.java'
